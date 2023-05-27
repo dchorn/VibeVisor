@@ -18,6 +18,12 @@ const handleMessages = require('./handlers/messageHandler');
 const client = new Discord.Client();
 
 client.once('ready', () => {
+
+    intents: [
+        Discord.Intents.FLAGS.GUILDS,
+        Discord.Intents.FLAGS.GUILD_MESSAGES
+      ]
+
     console.log('VibeVisor is online!');
 });
 
