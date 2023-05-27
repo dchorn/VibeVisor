@@ -48,7 +48,7 @@ Here's what you need to use and test this bot:
 
 1. Run the bot:
     ```shell
-    node src/bot.js
+    node src/index.js
     ```
 2. Invite your bot to your server and test its functionality.
 
