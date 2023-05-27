@@ -10,23 +10,23 @@
  * This file is the main entry point for the bot.
  */
 
-const Discord = require("discord.js");
-const { token } = require('./config.json');
+const { Client, Events, GatewayIntentBits } = require('discord.js');
+const { token } = require('../config.json');
 
 const handleMessages = require('./handlers/messageHandler');
 
-const client = new Discord.Client();
+// Create a new client instance
+const client = new Client({ intents: [GatewayIntentBits.Guilds ]});
 
-client.once('ready', () => {
-
-    intents: [
-        Discord.Intents.FLAGS.GUILDS,
-        Discord.Intents.FLAGS.GUILD_MESSAGES
-      ]
-
-    console.log('VibeVisor is online!');
+// When the client is ready, run this code (only once)
+// We use 'c' for the events parameter to keep it separate from the alredy defined 'client'
+client.once(Events.ClientReady, c => {
+    console.log(`VibeVisor is online!`);
+    console.log(`Logged in as ${c.user.tag}`);
 });
 
+// Handle messages
 client.on('message', handleMessages);
 
-client.login(process.env.DISCORD_BOT_TOKEN)
+// Log in to Discord with your client's token
+client.login(token)
