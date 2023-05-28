@@ -42,7 +42,7 @@ Here's what you need to use and test this bot:
     ```shell
     npm install
     ```
-4. Add your bot token and other necessary environment variables in a `.env` file. Use `.env.example` as a template.
+4. Add your bot token and other necessary configuration variables in a `.config.json` file. Use `.config.json.example` as a template.
 
 ### Running the Bot
 
