@@ -10,13 +10,17 @@
  * This file is the main entry point for the bot.
  */
 
-const { Client, Events, GatewayIntentBits } = require('discord.js');
+const fs = require('node:fs');
+const path = require('path');
+const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const { token } = require('../config.json');
 
-const handleMessages = require('./handlers/messageHandler');
+
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds ]});
+
+client.commands = new Collection();
 
 // When the client is ready, run this code (only once)
 // We use 'c' for the events parameter to keep it separate from the alredy defined 'client'
