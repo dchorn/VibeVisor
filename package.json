@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "deploy": "node src/deploy-commands.js"
   },
   "dependencies": {
     "discord.js": "^14.11.0",
