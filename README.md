@@ -1,6 +1,6 @@
 # VibeVisor
 
-![VibeVisor Logo](./assets/logo.png)
+<!-- ![VibeVisor Logo](./assets/logo.jpg) -->
 
 VibeVisor is a Discord bot designed to provide music recommendations based on a user's past preferences or current mood. It integrates with various music APIs to find and recommend songs, and can also create playlists for server events or specific activities.
 
